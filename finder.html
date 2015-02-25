@@ -20,12 +20,20 @@
 
 <body ng-controller="FinderController">
 
+<script>
+    document.addEventListener("keydown", function(event){
+        if(event.keyCode === 13){
+            document.getElementById("bn").click();
+        }
+    })
+</script>
+
 <div class="if-center-coverall yk-large-padding yk-xlarge-padding-bottom">
 	<div class="content-header yk-large-padding">
 
-		<input class="yk-search-box" ng-model="keyword_title">
+		<input class="yk-search-box" id="tf" ng-model="keyword_title">
 
-		<button class="btn" ng-click="search()">Go</button>
+		<button class="btn" id="bn" ng-click="search()">Go</button>
 
 	</div>
 	<div class="content-container-small">
