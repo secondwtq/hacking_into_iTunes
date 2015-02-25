@@ -3,32 +3,55 @@
 
 <head>
 
+	<meta charset="utf-8" >
+
 	<script src="angular.min.js"></script>
+	<!-- <script src="angular-filter.min.js"></script> -->
 	<script src="finder.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="main.css">
 
 </head>
 
 <body ng-controller="FinderController">
+<div class="if-center">
 
 	<div>
 
 		<input ng-model="keyword_title">
 
-		<button ng-click="search()">Go</button>
+		<button class="btn" ng-click="search()">Go</button>
 
 	</div>
 
+	<hr class="header-hr" />
+
 	<div ng-controller="ResultController">
-		<ul>
+
+		<div class="yk-grid-container">
+			<div class="yk-grid-row" ng-repeat="resultg in results" ng-if="$index%5==0">
+				<div class="yk-grid-col-def" ng-repeat="result in [results[$index], results[$index+1], results[$index+2], results[$index+3], results[$index+4]]">
+					<div><img ng-src="{{ result.artworkUrl100 }}"></div>
+					<div><a href="{{ result.trackViewUrl }}">{{ result.trackName }}</a></div>
+					<div>by <a href="{{ result.artistViewUrl }}">{{ result.artistName }}</a></div>
+					<div>
+						{{ result.primaryGenreName }}
+					</div>
+				</div>
+			</div>
+		</div>
+
+<!-- 		<ul>
 			<li ng-repeat="result in results">
 				<img ng-src="{{ result.artworkUrl100 }}">
 				<a href="{{ result.trackViewUrl }}">{{ result.trackName }}</a> @ <a href="{{ result.collectionViewUrl }}">{{ result.collectionName }}</a>
 				by <a href="{{ result.artistViewUrl }}">{{ result.artistName }}</a>
 				{{ result.primaryGenreName }}
 			</li>
-		</ul>
+		</ul> -->
 	</div>
 
+</div>
 </body>
 
 </html>

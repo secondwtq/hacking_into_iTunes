@@ -1,0 +1,314 @@
+body {
+	background-color: #B1B1B1;
+	background: #f5f6f7 url(bg-texture.jpg) repeat-x 0 0
+}
+
+hr {
+	border: 0;
+	height: 1px;
+	color: #DDDDDD;
+	background-color: #DDDDDD;
+	background-image: -webkit-linear-gradient(left, #eee, #aaa, #eee);
+	text-align: center;
+	box-shadow: 0 2px 0.2em rgba(0, 0, 0, 0.1);
+}
+
+hr:after {
+
+}
+
+hr.content-header-hr:after {
+	content: "萌萌哒分割线";
+	background: white;
+	border-radius: 3px;
+	font-size: x-small;
+	top: -1em;
+	position: relative;
+	padding: 0.3em;
+	box-shadow: 0 0 2em white;
+}
+
+hr.header-hr:after {
+	content: "萌萌哒分割线";
+	color: white;
+	background: #E5E5E7;
+	border-radius: 5px;
+	font-size: x-small;
+	top: -1.1em;
+	position: relative;
+	padding: 0.3em;
+	box-shadow: 0 0 2em #aaa;
+}
+
+.hidden-by-def {
+	display: none;
+}
+
+.center {
+	text-align: center;
+}
+
+.left-list {
+	position: fixed;
+	height: 100%;
+	left: 0;
+	top: 0;
+	box-shadow: 0 0 0.6em black;
+	border-right: 1px solid rgba(225, 225, 240, 50);
+	border-top: 1px solid gray;
+	border-bottom: 1px solid gray;
+	background-color: #D6DCE3;
+}
+
+.left-list ul {
+	list-style: none;
+	-webkit-padding-start: 0;
+}
+
+.left-list ul li {
+	padding: 1em;
+	text-shadow: white 1px 1px 1px;
+	cursor: pointer;
+}
+
+.left-list ul .selected {
+	background-image: -webkit-linear-gradient(top, #6BB0E2, #3A88CF);
+	box-shadow: 0 0 0.1em rgba(54, 124, 192, 1);
+	/*background-color: #3D8AD0;*/
+	color: white;
+	text-shadow: black 1px 1px 2px;
+}
+
+.bottom {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	padding: 1em;
+}
+
+.right-grid {
+	margin-right: 28px;
+	max-width: 80%;
+	margin-left: 200px;
+}
+
+.content-container {
+	box-shadow: 4px 4px 0.6em rgba(0, 0, 0, 0.5);
+	background-color: white;
+	padding: 1em;
+}
+
+.content-title {
+	text-align: center;
+	color: #454545;
+	text-shadow: -0.5px -0.5px 0px white;
+	font-weight: normal;
+	margin: 0;
+	font-size: x-large;
+	padding-top: 0.1em;
+	padding-bottom: 0;
+}
+
+.content-meta {
+	font-size: small;
+	color: #656565;
+	padding-top: 0.5em;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+	text-shadow: -0.5px -0.5px 0px #EEEEEE;
+}
+
+.content-date {
+	float: right;
+}
+
+.content-author { }
+
+.content-header {
+	background-image: -webkit-linear-gradient(top, #E9E9E9, #B8B7B8);
+	border-radius: 5px 5px 0 0;
+	box-shadow: 4px 4px 0.6em rgba(0, 0, 0, 0.5);
+	border-bottom: 1px solid #6A6A6A;
+	padding: 0.5em;
+}
+
+.content-content {
+	padding: 1em;
+}
+
+.comments-container {
+	margin: 0 auto;
+	max-width: 60%;
+	box-shadow: 4px 4px 0.5em rgba(0, 0, 0, 0.4);
+	border-radius: 0 0 2px 2px;
+	background-color: rgba(244, 244, 244, 0.5);
+	border: 1px solid LightGray;
+	padding: 1em;
+	/*transition: all ease-in-out 0.25s;*/
+}
+
+.comments-p {
+
+}
+
+.comments-p ul {
+	list-style: none;
+	padding: 0.5em;
+}
+
+.comments-p ul li {
+	border-top: 1px solid LightGray;
+	padding: 0.6em;
+}
+
+.comments-container.ng-hide {
+
+}
+
+.switch-comment-btn {
+	cursor: pointer;
+	background-color: #EDEDED;
+	box-shadow: 4px 6px 0.6em rgba(0, 0, 0, 0.5);
+	border-top: 1px solid LightGray;
+	border-radius: 0 0 2px 2px;
+	color: gray;
+	text-shadow: white 1px 1px 1px;
+	text-align: center;
+	padding: 0em;
+	user-select: none;
+	transition: all ease-in-out 0.25s;
+	font-size: 1.5em;
+}
+
+.switch-comment-btn:hover {
+	color: Gray;
+	background-color: #EAEAEA;
+}
+
+.comment-date {
+	text-align: right;
+	padding: 0.5em;
+	font-size: small;
+}
+
+.comment-box {
+	width: 100%;
+	min-height: 10em;
+}
+
+.comment-author {
+	font-size: x-small;
+}
+
+.comment-author-avatar {
+	font-size: 2em;
+	padding: 0.2em;
+}
+
+.comment-left {
+	float: left;
+	text-align: center;
+	/*margin-left: -1em;*/
+}
+
+.comment-content {
+	padding: 0.5em;
+	padding-left: 4em;
+}
+
+.comment-btns {
+	padding: 0.7em;
+	padding-bottom: 0;
+	text-align: right;
+}
+
+.comment-anim-enter,
+.comment-anim-leave {
+	-webkit-transition: 1s linear all; /* Chrome */
+	transition: 1s linear all;
+}
+
+.comment-anim-enter,
+.comment-anim-leave.comment-anim-leave-active {
+	opacity: 0;
+}
+
+.comment-anim-enter.comment-anim-enter-active,
+.comment-anim-leave {
+	opacity: 1;
+}
+
+.comment-anim-leave {
+
+}
+
+.btn {
+	padding: 0.6em;
+	border-radius: 2em;
+	border: 1px solid #CFCFD0;
+	background-color: #E2E2E3;
+	box-shadow: inset 2px 2px 1px LightGray;
+	color: white;
+	text-shadow: 0.5px 0.5px 2px gray;
+	transition: all ease-in-out 0.1s;
+}
+
+.btn:hover {
+	box-shadow: inset 1px 1px 1px #888888;
+	background-color: #B0B0B0;
+}
+
+.btn:active {
+	box-shadow: inset 1px 1px 1px gray;
+	background-color: #909090;
+	transform: scaleX(1.2) scaleY(1.2);
+}
+
+.loading {
+	padding: 1em;
+	transition: all ease-in-out 0.3s;
+}
+
+.loading.ng-hide {
+	line-height: 0px;
+	height: 0;
+	font-size: 0;
+	opacity: 0;
+}
+
+/* http://j4n.co/blog/Creating-your-own-css-grid-system */
+.yk-grid-container {
+	width: 100%;
+}
+
+.yk-grid-container * {
+	box-sizing: border-box;
+}
+
+.yk-grid-row {
+
+}
+
+.yk-grid-row:before,
+.yk-grid-row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+[class*='yk-grid-col-'] {
+	float: left;
+	min-height: 1px;
+	padding: 12px;
+	width: 16.66%;
+}
+
+.yk-grid-col-def {
+	width: 20%;
+}
+
+.if-center {
+	text-align: center;
+	max-width: 80%;
+	margin: 0 auto;
+}
