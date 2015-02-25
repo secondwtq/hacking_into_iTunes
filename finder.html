@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="itunes_finder">
+
+<head>
+
+	<script src="angular.min.js"></script>
+	<script src="finder.js"></script>
+
+</head>
+
+<body ng-controller="FinderController">
+
+	<div>
+
+		<input ng-model="keyword_title">
+
+		<button ng-click="search()">Go</button>
+
+	</div>
+
+	<div ng-controller="ResultController">
+		<ul>
+			<li ng-repeat="result in results">
+				<img ng-src="{{ result.artworkUrl100 }}">
+				<a href="{{ result.trackViewUrl }}">{{ result.trackName }}</a> @ <a href="{{ result.collectionViewUrl }}">{{ result.collectionName }}</a>
+				by <a href="{{ result.artistViewUrl }}">{{ result.artistName }}</a>
+				{{ result.primaryGenreName }}
+			</li>
+		</ul>
+	</div>
+
+</body>
+
+</html>
