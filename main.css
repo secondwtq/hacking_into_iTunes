@@ -380,6 +380,7 @@ hr.header-hr:after {
 .yk-itunes-album {
 	box-shadow: 1px 1px 5px gray;
 	border: 1px solid rgba(120,122,124, 0.6);
+	margin: 0.5em;
 }
 
 .yk-img-overlay:hover {
@@ -393,7 +394,7 @@ hr.header-hr:after {
 
 .yk-search-box {
 	border-radius: 12px;
-	font-size: medium;
+	/*font-size: medium;*/
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
