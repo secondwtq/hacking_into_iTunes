@@ -12,7 +12,7 @@
 	<script src="finder.js"></script>
 
 	<script src="tooltip.js" type="text/javascript"></script>
-	<link href="tooltip.css" rel="stylesheet" type="text/css">
+	<link href="yktooltip.css" rel="stylesheet" type="text/css">
 
 	<link rel="stylesheet" type="text/css" href="main.css">
 
@@ -46,9 +46,11 @@
 		<div class="yk-grid-container yk-small-font">
 			<div class="yk-grid-row" ng-repeat="resultg in results" ng-if="$index%5==0">
 				<div class="yk-grid-col-def" ng-repeat="result in [results[$index], results[$index+1], results[$index+2], results[$index+3], results[$index+4]]">
-					<div class="yk-overlayed-image"><a href="{{ get_hd_artwork(result.artworkUrl100) }}">
-						<img class="yk-itunes-album" ng-src="{{ result.artworkUrl100 }}" title="{{ result.collectionName }}" ng-mouseenter="show_tooltip()" tooltiped >
-					</a></div>
+					<div class="yk-overlayed-image">
+						<a href="{{ get_hd_artwork(result.artworkUrl100) }}">
+							<img class="yk-itunes-album" ng-src="{{ result.artworkUrl100 }}" title="{{ result.collectionName }}" tooltiped yk-tooltip="<a href={{ result.collectionViewUrl }}>{{ result.collectionName }}</a>">
+						</a>
+					</div>
 					<div><a class="trivial" href="{{ result.trackViewUrl }}">{{ result.trackName }}</a></div>
 					<div>by <a class="trivialtrivial" href="{{ result.artistViewUrl }}">{{ result.artistName }}</a></div>
 					<div>

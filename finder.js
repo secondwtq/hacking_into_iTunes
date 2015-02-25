@@ -29,11 +29,17 @@ iTunesFinderApp.service('resultService', function ($http) {
 });
 
 iTunesFinderApp.directive('tooltiped', function() {
-  return function(scope, element) {
-    element.on('mouseenter', function() {
-    	tooltip.pop(element[0], 'aaaa');
-    });
-  };
+  return {
+  	restrict: "A",
+  	scope: {
+  		ykTooltip: "@ykTooltip"
+  	},
+  	link: function(scope, element, attributes) {
+		    element.on('mouseenter', function() {
+		    	tooltip.pop(element[0], scope.ykTooltip);
+		    });
+		}
+	}
 });
 
 iTunesFinderApp.controller('FinderController', function ($scope, $rootScope, resultService) {
@@ -48,11 +54,6 @@ iTunesFinderApp.controller('FinderController', function ($scope, $rootScope, res
 
 	$scope.get_hd_artwork = function (org100) {
 		return org100.replace('100x100', '1200x1200'); }
-
-	$scope.show_tooltip = function () {
-		
-	}
-
 	$scope.keyword_title = 'Yellow';
 
 });

@@ -1,0 +1,92 @@
+/* Tooltip component by www.menucool.com */
+
+/*For tooltip target element that has set class="tooltip" */
+.tooltip {
+    text-decoration: none;
+    border-bottom: 1px dotted #36c;
+    color: #36c;
+    outline: none;
+}
+
+/* tooltip box */
+div#mcTooltip  {
+    line-height: 16px;
+    border-width: 1px;   
+    color: #333; 
+    border-color:#BBBBBB;
+    padding: 12px;
+    font-size: 12px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px #AAAAAA;
+}
+
+div#mcTooltip, div.mcTooltipInner {
+    background-color: rgba(250,250,250, 0.95);
+}
+
+/* For hyperlink within tooltip */
+div#mcTooltip a {
+    color:#36c;
+}
+
+/* Close button. Only sticky or overlay has been set to true,
+    or is on iPhone, iPad, Android, BlackBerry, or IEMobile devices. */
+div#mcttCloseButton {
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    background-image: url(closeBtn.gif);
+    cursor: pointer;
+    overflow: hidden;
+    top: 12px;
+    left: 12px;
+    left: auto;
+}
+
+/* Give the close button a bigger size in smaller devices */
+@media only screen and (max-width: 1024px) {
+    div#mcttCloseButton  {
+        width: 24px;
+        height: 24px;
+        background-size: cover;
+    }
+} 
+
+/* Only applies when overlay has been set to true or 1 */
+div#mcOverlay {
+    background-color: white;
+    opacity: 0.8;
+    filter: alpha(opacity=80); 
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    z-index: 4; 
+}
+
+div#tooltipAjaxSpin {
+    margin: 20px 50px;
+    background: transparent url(loading.gif) no-repeat center center;
+    width: 50px;
+    height: 30px;
+    font-size: 0;
+}
+
+div#mcTooltipWrapper {position:absolute;visibility:hidden;overflow:visible;z-index:9999999999;top:0px;}
+div#mcTooltip {float:left;border-style:solid;position:relative;overflow:hidden;}
+div.mcTooltipInner {float:left;position:relative;width:auto;height:auto;}
+div#mcttCo {position:absolute;text-align:left;}
+div#mcttCo em, div#mcttCo b {display:block; width:0; height:0;overflow:hidden;}
+
+div#mcTooltip, div#mcTooltip div {
+     -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+     box-sizing: content-box;
+}
+
+img {
+    vertical-align: middle;
+    border: 0;
+}

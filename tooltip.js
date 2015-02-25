@@ -1,11 +1,11 @@
 var tooltipOptions=
 {
     showDelay: 100,
-    hideDelay: 300,
+    hideDelay: 100,
     effect: "fade",
-    duration: 200,
+    duration: 150,
     relativeTo: "element",
-    position: 1,
+    position: 2,
     smartPosition: true,
     offsetX: 0,
     offsetY: 0,
